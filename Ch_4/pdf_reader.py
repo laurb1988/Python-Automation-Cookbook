@@ -1,0 +1,18 @@
+from PyPDF2 import PdfFileReader
+
+file = open('document-1.pdf', 'rb')
+document = PdfFileReader(file)
+print(document.numPages)
+print(document.isEncrypted)
+print(document.documentInfo['/CreationDate'])
+print(document.documentInfo['/Producer'])
+print(document.pages[0].extractText())
+file.close()
+print("##########SECOND FILE############")
+file = open('document-2.pdf', 'rb')
+document = PdfFileReader(file)
+print(document.isEncrypted)
+document.decrypt('automate')
+print(document.numPages)
+print(document.pages[1].extractText())
+file.close()

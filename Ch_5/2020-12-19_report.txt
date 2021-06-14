@@ -1,0 +1,6 @@
+
+Movies Report
+==============
+DATE: 2020-12-19 14:12:42.059563
+Movies seen last 30 days: 3
+Total minutes: 376
